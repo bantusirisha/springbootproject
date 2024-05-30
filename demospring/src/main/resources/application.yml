@@ -1,0 +1,21 @@
+server:
+    port: 8888
+    servlet:
+        context-path: /employee
+spring:
+    datasource:
+        driver-class: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        password: sirisha
+        url: jdbc:sqlserver://localhost:1433;database =employeedb;user=sa;password=sirisha;database=
+            employeedb ;encrypt=true;trustServerCertificate=true
+        username: sa
+    jpa:
+        hibernate:
+            ddl-auto: update
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.SQLServerDialect
+                format_sql: true
+        show-sql: true
